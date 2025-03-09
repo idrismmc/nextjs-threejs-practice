@@ -1,21 +1,21 @@
-import { CSSProperties, ElementType, ReactNode } from "react";
+import { CSSProperties, ElementType, ReactNode, HTMLAttributes } from "react";
 import clsx from "clsx";
 
 type BoundedProps = {
-  as?: ElementType;
+  as?: "div" | "section" | "article" | "main" | "nav";
   className?: string;
   style?: CSSProperties;
   children: ReactNode;
-};
+} & HTMLAttributes<HTMLElement>;
 
 export function Bounded({
-  as: Comp = "section",
+  as: Component = "section",
   className,
   children,
   ...restProps
 }: BoundedProps) {
   return (
-    <Comp
+    <Component
       className={clsx(
         "px-6 ~py-10/16 [.header+&]:pt-44 [.header+&]:md:pt-32",
         className
@@ -23,6 +23,6 @@ export function Bounded({
       {...restProps}
     >
       <div className="mx-auto w-full max-w-6xl">{children}</div>
-    </Comp>
+    </Component>
   );
 }
