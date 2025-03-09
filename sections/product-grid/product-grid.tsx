@@ -26,6 +26,7 @@ const ProductGrid = () => {
             price={product.price}
             name={product.name}
             color={product.color}
+            href={product.href}
           />
         ))}
       </div>

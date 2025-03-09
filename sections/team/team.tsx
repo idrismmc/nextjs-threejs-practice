@@ -23,6 +23,7 @@ const Team = () => {
                 firstName={member.firstName}
                 lastName={member.lastName}
                 index={index}
+                href={member.href}
               />
             </SlideIn>
           </React.Fragment>

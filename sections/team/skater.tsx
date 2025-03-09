@@ -10,6 +10,7 @@ type Props = {
   firstName: string;
   lastName: string;
   index: number;
+  href: string;
 };
 
 export default function Skater({
@@ -18,6 +19,7 @@ export default function Skater({
   firstName,
   lastName,
   index,
+  href,
 }: Props) {
   const colors = [
     "text-brand-blue",
@@ -53,7 +55,7 @@ export default function Skater({
           <span className="block">{lastName}</span>
         </h3>
       </div>
-      <ButtonLink href="/" size="sm">
+      <ButtonLink href={href} size="sm">
         Build their board
       </ButtonLink>
     </div>

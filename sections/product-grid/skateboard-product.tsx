@@ -12,6 +12,7 @@ type SkateboardProductProps = {
   price: number;
   name: string;
   color: string;
+  href: string;
 };
 
 const VERTICAL_LINE_CLASSES =
@@ -25,6 +26,7 @@ const SkateboardProduct = ({
   price,
   name,
   color,
+  href,
 }: SkateboardProductProps) => {
   return (
     <div className="group relative mx-auto w-full max-w-72 px-8 pt-4">
@@ -56,7 +58,7 @@ const SkateboardProduct = ({
       </h3>
 
       <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-200 group-hover:opacity-100">
-        <ButtonLink href="/">Customize</ButtonLink>
+        <ButtonLink href={href}>Customize</ButtonLink>
       </div>
     </div>
   );
