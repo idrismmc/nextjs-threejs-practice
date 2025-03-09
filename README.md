@@ -1,6 +1,6 @@
 # Suburbia Skateboards - Demo Website
 
-This project is showcases as part of learning exercise for Next.js and Three.js.
+This project is showcased as part of learning exercise for Next.js and Three.js.
 
 ## Tech Stack
 
